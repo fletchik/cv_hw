@@ -5,3 +5,4 @@
 building a CV, contains:
 - PDF example of CV
 - folder from OverLeaf
+- DockerFile for latex (not fixed yet)
