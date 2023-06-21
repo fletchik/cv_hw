@@ -1,0 +1,26 @@
+name: compiler
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs: 
+  compile:
+    runs-on: ubuntu-latest
+    name: make cv
+    steps:
+      - name: code check
+        uses: actions/checkout@v2
+      - name: create docker images
+        run: docker build -t local -f  Dockerfile .
+      - name: run tests
+        run: docker run -v ${PWD}:/working_dir local
+    
+      - name: Commit changes
+        run: |
+          git config --global user.name 'compiler'
+          git config --global user.email 'noreplay@users.noreply.github.com'
+          git add CV.pdf
+          git commit -am "cv updated"
+          git push
