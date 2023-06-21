@@ -21,6 +21,6 @@ jobs:
         run: |
           git config --global user.name 'compiler'
           git config --global user.email 'noreplay@users.noreply.github.com'
-          git add CV.pdf
+          git add redis_docker/cv/resume.pdf
           git commit -am "cv updated"
           git push

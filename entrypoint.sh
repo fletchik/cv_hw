@@ -2,4 +2,4 @@
 
 
 cd working_dir/redis_docker/cv
-pdflatex  resume.tex
+xelatex  resume.tex
