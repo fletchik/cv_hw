@@ -10,5 +10,7 @@ RUN apt-get update && \
 RUN apt-get update
 RUN apt-get install -y texlive-xetex
 
+RUN apt-get install texlive-fonts-extra 
+
 
 ENTRYPOINT ["sh",  "/entrypoint.sh"]
