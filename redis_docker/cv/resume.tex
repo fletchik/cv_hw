@@ -1,0 +1,174 @@
+\documentclass[]{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}\\}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Varvara Nazarenko}
+\newcommand{\yourEmail}{varunaza@gmail.com}
+\newcommand{\yourPhone}{053-388-6817}
+\newcommand{\githubUserName}{fletchik}
+\newcommand{\linkedInUserName}{varuuu}
+
+% An alternate profile section 
+% \alignProfileTable
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \ralewayBold{\href{\yourWebsiteLink}{\Large \yourName}} & 
+%     Email : \href{mailto:\yourEmail}{\yourEmail}
+%     \\
+%     \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+%     Mobile : \yourPhone
+%     \\
+%     \href{https://www.linkedin.com/in/\linkedInUserName}{LinkedIn://\linkedInUserName} & Website : \href{\yourWebsiteLink}{\yourWebsite}
+%     \\
+% \end{tabular*}
+
+
+
+\begin{center}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{6pt} 
+    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
+    \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn \linkedInUserName}} $|$
+    \href{https://github.com/\githubUserName}{\underline{github  \githubUserName}} 
+    % $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
+\end{center}
+
+
+
+\section{Objective}
+% Put school first and degree second if your school is reputable
+\singleItem{Position: }{Student Job or C++ / Python Junior Programmer} \\
+\singleItem{About me: }{Student of a B.Sc. “Computing and Data Science” in HSE }
+
+
+
+% \courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}
+\sectionsep
+
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{Computing and Data Science BSc.}{Higher School of Economics }{Moscow, Russia}{2022 -- now}
+
+\begin{bullets}
+    \item Data Structures and Algorithms, OOP
+  \item C++ , Python
+\end{bullets}
+\sectionsep
+\educationHeading{Applied Mathematics BSc.}{Bauman Moscow State Technical University}{Moscow, Russia}{2021 -- 2022}
+\begin{bullets}
+    \item Applied Maths
+  \item Computer Science
+\end{bullets}
+\sectionsep
+\educationHeading{Software engineering BSc.}{Higher School of Economics }{Nizhny Novgorod, Russia}{2020 -- 2021}
+
+% \courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}
+\sectionsep
+\section{Skills}
+\begin{skillList}
+    \singleItem{Programming Languages:}{C, C++, Python, C\#, SQL}
+    \\
+    \singleItem{Web Development:}{JavaScript, HTML/CSS}
+    \\
+    \singleItem{Technology:}{Git, Docker,  \LaTeX}
+\end{skillList}
+\sectionsep
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Additional education}
+\resumeHeading{Moscow Programming School }{(GPA – 4.57 / 5)}{Moscow}{2016 -- 2019}
+\begin{bullets}
+    \item Industrial courses, cooperates Yandex
+  \item Cubersecurity, CTF
+  \item C++, Python, Web-Design
+\end{bullets}
+\sectionsep
+
+\resumeHeading{High School}{(GPA – 4.79 / 5)}{Nizhny Novgorod, Russia}{2018 -- 2020}
+\begin{bullets}
+\item   Institute of Applied Physics Russian Academy of Science
+   \item  project in the AP RAS labaratory
+\end{bullets}
+\sectionsep
+
+\resumeHeading{Google}{in process}{Online}{2023 – 2024}
+\begin{bullets}
+    \item Machine Learning: Crash Course, Clustering, Decision Forests
+\end{bullets}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+
+\projectHeading{Mood Bot}{https://github.com/fletchik/MoodBot}{Python, TeleBot}
+A mood tracker via Telegram app, which helps you during your educational process. The bot analyzes your mental state and suggests ways to avoid procrastination and increase productivity.\\
+\sectionsep
+
+\projectHeading{Pacman imitation}{https://github.com/fletchik/}{Python, PyGame}
+Industrial programming courses qualification project.\\
+\sectionsep
+
+
+% Example using bullets and dates 
+% \projectHeadingWithDate{Hogwart\textquotesingle{}s Library Management System}{https://github.com/Aarif123456/hogwartslibrary}{PHP, JavaScript, HTML, CSS, MySQL}{Aug 2019}
+% \begin{bullets}
+    % \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
+% \end{bullets}
+% \sectionsep
+  
+\section{Languages}
+\begin{skillList}
+    \singleItem{Fluently: }{English, Russian}
+    \\
+    \singleItem{Learning: }{Hebrew, German}
+\end{skillList}
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+
+
+% A more concise alternate 
+% \begin{skillList}
+%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket}%
+%     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
+%     \\
+%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
+%     {Technology:}{Git, AWS, GCP, Azure, Docker, \LaTeX}%
+% \end{skillList}
+\end{document}
