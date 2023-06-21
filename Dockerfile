@@ -1,16 +1,14 @@
 FROM debian:10.1
 
+COPY entrypoint.sh /entrypoint.sh
+
+
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends texlive-latex-recommended texlive-fonts-recommended && \
-    apt-get install -y --no-install-recommends texlive-latex-extra texlive-fonts-extra texlive-lang-all && \
-    rm -rf /var/lib/apt/lists/* \
-    build-essential \
-    libboost-locale-dev \
-    libboost-regex-dev \
-    protobuf-compiler \
-    libprotobuf-lite23 \
-    libprotobud-dev
+    apt-get install -yq tzdata && \
+    dpkg-reconfigure -f noninteractive tzdata
 
-WORKDIR /root/cv
+RUN apt-get update
+RUN apt-get install -y texlive-xetex
 
-CMD ['bash']
+
+ENTRYPOINT ["sh",  "/entrypoint.sh"]

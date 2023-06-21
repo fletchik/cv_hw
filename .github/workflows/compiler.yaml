@@ -17,7 +17,7 @@ jobs:
       - name: trying
         run: docker run -v ${PWD}:/working_dir local
     
-      - name: Commit changes
+      - name: commit
         run: |
           git config --global user.name 'compiler'
           git config --global user.email 'noreplay@users.noreply.github.com'
